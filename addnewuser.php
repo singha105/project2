@@ -11,6 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Confirm Password: " . htmlspecialchars($_POST['confirm_password']) . "<br>";
     echo "Name: " . htmlspecialchars($_POST['name']) . "<br>";
     echo "Email: " . htmlspecialchars($_POST['email']) . "<br>";
+    header("Location: success.php");
+    exit();
 } else {
     echo "Invalid request method!";
 }
